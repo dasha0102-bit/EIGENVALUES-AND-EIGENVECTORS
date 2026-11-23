@@ -12,7 +12,16 @@ To write a python program to find the Eigenvalues and Eigen Vectors
 
 
 ## Program:
-<img width="944" height="581" alt="{97A74FA8-4D8D-458D-8FB0-FFC112BB86FD}" src="https://github.com/user-attachments/assets/f4cf6249-9f37-4fad-89cc-1279eb36bcf7" />
+```
+
+import os 
+os.environ["OPENBLAS_NUM_THREADS"] = "1"
+
+import numpy as np
+A = np.array([[2,2],[1,3]])
+values,vectors = np.linalg.eig(A)
+print("Eigen values are {} and Eigen Vectors are {}".format(values,vectors))
+```
 ## Output:
 <img width="1394" height="450" alt="{037BB5EE-188C-48D9-ABCE-9B8B29A2D2DC}" src="https://github.com/user-attachments/assets/6989f0fe-089c-42ab-9ec0-53463b360331" />
 ## Result:
